@@ -1,0 +1,35 @@
+.details-headline {
+    margin-top: 1.5em;
+}
+
+.block-details {
+    background-color: rgb(163, 163, 152);
+    padding: 2em;
+    margin-top: 2em;
+    border-radius: 2px;
+    height: 50vh;
+    width: 42vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.block-details pre {
+    flex: auto;
+}
+
+.block-details button {
+    background-color: rgb(180, 237, 162);
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.0892857143em;
+}
+
+.text-area {
+    width: 315px;
+    height: 228px;
+    resize: none;
+}

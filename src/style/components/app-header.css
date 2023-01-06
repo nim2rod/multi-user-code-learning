@@ -1,0 +1,14 @@
+.app-header {
+    display: flex;
+    justify-content: space-around;
+    background-color: antiquewhite;
+    align-items: center;
+    height: 4.08em;
+    margin-bottom: 1em;
+    width: -webkit-fill-available;
+}
+
+.app-header nav {
+    display: flex;
+    gap: 3em;
+}

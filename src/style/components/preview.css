@@ -1,0 +1,20 @@
+.card-preview {
+    background-color: rgb(220, 229, 185);
+    margin-bottom: 1.2em;
+    border: 1px rgb(219, 219, 219) solid;
+    border-radius: 0.54em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em;
+    width: 42vh;
+    height: 19vh;
+    align-items: center;
+}
+
+.btn-card {
+
+    background-color: aliceblue;
+    border-radius: 6px;
+    padding: 0.4em;
+}
