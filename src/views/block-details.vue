@@ -5,7 +5,13 @@
       <pre>
         {{ block.value }}
       </pre>
-      <textarea class="text-area" name="" id=""> {{ block.value }} </textarea>
+      <textarea
+        class="text-area"
+        name=""
+        id=""
+        @input="onChange"
+        v-model="blockRes"
+      ></textarea>
       <button @click="goBack()">go back</button>
     </section>
   </section>
@@ -18,19 +24,24 @@ export default {
   data() {
     return {
       block: null,
+      blockRes: null,
     };
   },
-  created() {
+  async created() {
     const { id } = this.$route.params;
-    console.log("id:", id);
-    blockService.getById(id).then((currBlock) => {
-      console.log("block", currBlock);
+    await blockService.getById(id).then((currBlock) => {
       this.block = currBlock;
+      this.blockRes = currBlock.value;
     });
+
+    // this.blockRes = block.value;
   },
   methods: {
     goBack() {
       this.$router.push(`/`);
+    },
+    onChange() {
+      console.log(this.blockRes);
     },
   },
 };

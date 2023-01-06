@@ -1,11 +1,12 @@
 <template>
   <section v-if="block" class="card-preview">
-    <h1>this is block preview</h1>
+    <h1>{{ block.topic }}</h1>
     <div>
-      {{ block.id }}
       {{ block.value }}
     </div>
-    <div class="btn-card btn" @click="viewblockDetails(block)">View block!</div>
+    <div class="btn-card btn" @click="viewblockDetails(block)">
+      Solve block!
+    </div>
   </section>
 </template>
     
