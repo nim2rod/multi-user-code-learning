@@ -1,7 +1,10 @@
+import { httpService } from './http.service'
 import { storageService } from './storage-service'
 import { utilService } from './util-service'
 
 const KEY = 'block_db'
+
+const ENDPOINT_BLOCKS = 'block'
 
 _createBlocks()
 
@@ -9,12 +12,20 @@ export const blockService = {
     query,
     getById
 }
-function query() {
-    return storageService.query(KEY)
+async function query(filterBy = null) {
+    //http to server
+    return await httpService.get(ENDPOINT_BLOCKS, filterBy);
+
+    //front only
+    // return storageService.query(KEY)
 }
 
-function getById(blockId) {
-    return storageService.get(KEY, blockId)
+async function getById(blockId) {
+    //http to server
+    return await httpService.get(`${ENDPOINT_BLOCKS}/${blockId}`)
+
+    //front only
+    // return storageService.get(KEY, blockId)
 }
 
 function _createBlocks() {

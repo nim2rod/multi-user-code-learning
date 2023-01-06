@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     viewblockDetails(block) {
-      this.$router.push(`block/${block.id}`);
+      this.$router.push(`block/${block._id}`);
     },
   },
   created() {},
