@@ -2,6 +2,12 @@
     margin-top: 1.5em;
 }
 
+.permission {
+    place-self: start;
+    font-weight: 500;
+    color: #524a44;
+}
+
 .block-details {
     background-color: rgb(163, 163, 152);
     padding: 2em;

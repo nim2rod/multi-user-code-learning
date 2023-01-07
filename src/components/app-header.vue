@@ -2,8 +2,12 @@
   <header class="app-header">
     <div>The App!</div>
     <nav>
-      <router-link class="link" to="/">Home</router-link>
-      <router-link class="link" to="/about">About</router-link>
+      <router-link @click="checkIfLeaveBlock" class="link" to="/"
+        >Home</router-link
+      >
+      <router-link @click="checkIfLeaveBlock" class="link" to="/about"
+        >About</router-link
+      >
     </nav>
   </header>
 </template>
@@ -15,7 +19,13 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    checkIfLeaveBlock() {
+      const url = this.$route.fullPath;
+      const res = url.includes("block");
+      if (res) socketService.emit("on-leave-topic", null);
+    },
+  },
   created() {},
 };
 </script>
