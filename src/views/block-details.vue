@@ -2,9 +2,12 @@
   <section class="main-app" v-if="block">
     <h1 class="details-headline">{{ block.topic }}</h1>
     <section class="block-details">
-      <pre>
+      <div>
         {{ block.value }}
-      </pre>
+      </div>
+      <!-- <pre>
+        {{ block.value }}
+      </pre> -->
       <textarea
         class="text-area"
         name=""
@@ -18,6 +21,7 @@
 </template>
   
   <script>
+import { socketService } from "../services/socket.service";
 import { blockService } from "../services/block-service";
 export default {
   name: "block-details",
@@ -33,8 +37,9 @@ export default {
       this.block = currBlock;
       this.blockRes = currBlock.value;
     });
-
-    // this.blockRes = block.value;
+    // Sockets:
+    socketService.emit("set-topic-socket", this.block.topic);
+    socketService.on("student-change-code", this.renderStudentChange);
   },
   methods: {
     goBack() {
@@ -42,6 +47,12 @@ export default {
     },
     onChange() {
       console.log(this.blockRes);
+      socketService.emit("student-change-code", this.blockRes);
+    },
+    renderStudentChange(data) {
+      console.log("student-change-code");
+      console.log("data:", data);
+      this.blockRes = data;
     },
   },
 };

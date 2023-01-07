@@ -14,7 +14,7 @@
     flex-direction: column;
 }
 
-.block-details pre {
+.block-details div {
     flex: auto;
 }
 
@@ -29,7 +29,8 @@
 }
 
 .text-area {
-    width: 315px;
+    width: 303px;
     height: 228px;
     resize: none;
+    padding: 0.7em;
 }
