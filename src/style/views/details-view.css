@@ -40,3 +40,10 @@
     resize: none;
     padding: 0.7em;
 }
+
+.brain {
+    font-size: 8em;
+    position: absolute;
+    left: 67%;
+    top: 11%;
+}

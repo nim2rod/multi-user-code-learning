@@ -1,9 +1,7 @@
 <template>
   <section v-if="block" class="card-preview">
     <h1>{{ block.topic }}</h1>
-    <div>
-      {{ block.value }}
-    </div>
+    <pre>{{ block.value }}</pre>
     <div class="btn-card btn" @click="viewblockDetails(block)">
       Solve block!
     </div>

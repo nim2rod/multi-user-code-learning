@@ -1,6 +1,6 @@
 <template>
   <section class="main-app">
-    <h1 class="main-headline">this is the main App</h1>
+    <h1 class="main-headline">Choose code block</h1>
     <block-list v-if="blocks" :blocks="blocks"></block-list>
   </section>
 </template>
