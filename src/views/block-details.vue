@@ -29,6 +29,7 @@ export default {
     return {
       block: null,
       blockRes: null,
+      isMentor: null,
     };
   },
   async created() {
@@ -40,19 +41,25 @@ export default {
     // Sockets:
     socketService.emit("set-topic-socket", this.block.topic);
     socketService.on("student-change-code", this.renderStudentChange);
+    socketService.on("mentor", this.isMentorFunc);
   },
   methods: {
     goBack() {
       this.$router.push(`/`);
     },
     onChange() {
-      console.log(this.blockRes);
+      console.log("this.isMentor", this.isMentor);
+      if (this.isMentor) return;
       socketService.emit("student-change-code", this.blockRes);
     },
     renderStudentChange(data) {
       console.log("student-change-code");
       console.log("data:", data);
       this.blockRes = data;
+    },
+    isMentorFunc(value) {
+      if (!this.isMentor) this.isMentor = value;
+      console.log("this.isMentor", this.isMentor);
     },
   },
 };
