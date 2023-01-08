@@ -4,10 +4,17 @@ Test your JS knowledge with simple code blocks you need to complete!
 
 #
 
-This repository is the Client side, using Vue.JS with Vite, using RestAPI and micro services for the abilty to maintain and expend the app easily. 
-Using Socket.io package package for real-time connections between multiply users.
+## What i used for building the app?
 
-#
+- This repository is the Client side, using vue.JS with vuex state management, using RestAPI and micro services for the abilty to maintain and expend the app easily. 
+- Socket.IO- Using Socket.io package package for real-time connections between multiply users.
+- Node.JS with Express -Server side.
+- MongoDB Atlas Database - database.
+- Render - deploy and host for the site. 
+- Link to live project:  https://js-hint-proj.onrender.com/
+
+
+## What the app do?
 
 The platform use for the student and the mentor the watch the same code block changes,
 but only the student's change's send to throw Socket's to other students and the menter. 
