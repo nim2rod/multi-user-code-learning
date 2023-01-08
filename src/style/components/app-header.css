@@ -1,11 +1,15 @@
 .app-header {
     display: flex;
     justify-content: space-around;
-    background-color: antiquewhite;
+    background-color: #eeebe6;
     align-items: center;
     height: 4.08em;
     margin-bottom: 1em;
     width: -webkit-fill-available;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--clr7);
+    border: 1px rgb(219, 219, 219) solid;
 }
 
 .app-header nav {
