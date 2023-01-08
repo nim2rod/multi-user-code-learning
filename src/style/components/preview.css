@@ -7,8 +7,8 @@
     display: flex;
     flex-direction: column;
     padding: 1em;
-    width: 42vh;
-    height: 19vh;
+    /* width: 42vh;
+    height: 19vh; */
     align-items: center;
 }
 

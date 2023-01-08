@@ -5,7 +5,8 @@
     <div class="permission" v-if="!isMentor">Student</div>
     <div class="permission" v-if="isMentor">Mentor</div>
 
-    <div v-if="this.sucscess" class="brain">🧠</div>
+    <div v-if="this.sucscess" class="success-icon">👏🏻</div>
+
     <section class="block-details">
       <pre>
         {{ block.value }}
@@ -52,7 +53,12 @@ export default {
     onChange() {
       if (this.isMentor) return;
       socketService.emit("student-change-code", this.blockRes);
-      if (this.blockRes === this.block.result) this.sucscess = true;
+
+      if (
+        this.blockRes.replaceAll(" ", "") ===
+        this.block.result.replaceAll(" ", "")
+      )
+        this.sucscess = true;
     },
     renderStudentChange(data) {
       this.blockRes = data;
