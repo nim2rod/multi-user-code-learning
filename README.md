@@ -6,7 +6,8 @@ Test your JS knowledge with simple code blocks you need to complete!
 
 ## What i used for building the app?
 
-- This repository is the Client side, using vue.JS with vuex state management, using RestAPI and micro services for the abilty to maintain and expend the app easily. 
+- This repository is the Client side, using vue.JS ,vuex state management, and Vite dev environment.
+- using RestAPI and micro services for the abilty to maintain and expend the app easily. 
 - Socket.IO- Using Socket.io package package for real-time connections between multiply users.
 - Node.JS with Express -Server side.
 - MongoDB Atlas Database - database.
